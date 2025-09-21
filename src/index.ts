@@ -1,5 +1,7 @@
-import { app } from "./app.js";
+import { app } from './app'
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000
 
-app.listen(3000, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT)
+
+console.log(`🚀 Elysia running at http://localhost:${PORT}`)
